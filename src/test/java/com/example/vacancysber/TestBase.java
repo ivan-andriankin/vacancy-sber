@@ -17,8 +17,8 @@ public class TestBase {
 
     SiteObjects siteObjects = new SiteObjects();
 
-//    static String currentCityRus = "Тольятти";
-//    static String currentCityEng = "Tolyatti";
+    static String currentCityRus = "Тольятти";
+    static String currentCityEng = "Tolyatti";
 //    static String x5Group = "X5 Group";
 //    static String x5GroupImport = "X5 GROUP, Import";
 //    static String x5Digital = "X5 Digital";
@@ -51,21 +51,21 @@ public class TestBase {
         Attach.addVideo();
     }
 
-//    static Stream<Arguments> menuItems() {
-//        return Stream.of(
-//                Arguments.of(List.of(currentCityEng,
-//                        "For job seekers",
-//                        "For employers",
-//                        "Completed resume",
-//                        "Career consulting",
-//                        "All services")),
-//                Arguments.of(List.of(currentCityRus,
-//                        "Соискателям",
-//                        "Работодателям",
-//                        "Готовое резюме",
-//                        "Карьерная консультация",
-//                        "Все сервисы"))
-//        );
-//    }
+    static Stream<Arguments> menuItems() {
+        return Stream.of(
+                Arguments.of(List.of(currentCityEng,
+                        "For job seekers",
+                        "For employers",
+                        "Completed resume",
+                        "Career consulting",
+                        "All services")),
+                Arguments.of(List.of(currentCityRus,
+                        "Соискателям",
+                        "Работодателям",
+                        "Готовое резюме",
+                        "Карьерная консультация",
+                        "Все сервисы"))
+        );
+    }
 
 }
