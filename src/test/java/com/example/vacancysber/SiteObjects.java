@@ -1,4 +1,4 @@
-package com.example.vacancyhaulmont;
+package com.example.vacancysber;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;

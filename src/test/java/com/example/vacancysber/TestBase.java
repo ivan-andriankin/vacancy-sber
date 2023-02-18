@@ -1,4 +1,4 @@
-package com.example.vacancyhaulmont;
+package com.example.vacancysber;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;

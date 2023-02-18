@@ -1,4 +1,4 @@
-package com.example.vacancyhaulmont;
+package com.example.vacancysber;
 
 import org.junit.jupiter.api.Tag;
 
