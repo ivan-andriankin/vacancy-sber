@@ -1,5 +1,6 @@
 package com.example.vacancysber;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
@@ -8,13 +9,17 @@ import java.util.List;
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.url;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SiteObjects {
 
     private SelenideElement
             searchInput = $("#a11y-search-input"),
             vacancyTitle = $("[data-qa=vacancy-title]"),
-            vacancyResponseLink = $("[data-qa=vacancy-response-link-top]")
+            vacancyResponseLink = $("[data-qa=vacancy-response-link-top]"),
+            gosuslugiAccountButton = $("a[data-qa=account-account-login-social-esia"),
+            vacancyDescription = $("div[.vacancy-description]")
     ;
 
     private ElementsCollection
@@ -83,5 +88,21 @@ public class SiteObjects {
         vacancyResponseLink.click();
         return this;
     }
+
+    public SiteObjects findTextInVacancyDescription(String value) {
+        vacancyDescription.shouldHave(text(value));
+        return this;
+    }
+
+    public SiteObjects clickOnGosuslugiAccountButton() {
+        gosuslugiAccountButton.click();
+        return this;
+    }
+
+    public SiteObjects verifyPageUrl(String value) {
+        assertEquals(value, url());
+        return this;
+    }
+
 
 }

@@ -20,8 +20,7 @@ public class TestBase {
     static String currentCityRus = "Тольятти";
     static String currentCityEng = "Tolyatti";
     static String searchValueSberTech = "SberTech";
-//    static String x5GroupImport = "X5 GROUP, Import";
-//    static String x5Digital = "X5 Digital";
+    static String gosuslugiUrl = "https://esia.gosuslugi.ru/login/";
 
 
     @BeforeAll

@@ -24,13 +24,12 @@ public class Tests extends TestBase {
 
 
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("AT - Найти вакансию 'QA-инженер (web)' в 'X5 Group'")
+    @DisplayName("AT - Найти вакансию 'QA Automation Engineer' в 'SberTech'")
     @Test
-    void test2() {
+    void findVacancyInSberTech() {
         siteObjects.openPage()
                 .putValueInSearchFieldAndSubmit(searchValueSberTech)
 //                .unsetCurrentCityFromFilter(currentCityRus)
-                .clickOnCompanyCardInSearchResults(searchValueSberTech)
                 .goToCompanyPageFromVacancyCard(searchValueSberTech)
 //                .expandVacanciesDropDownCategories("Вакансии в других регионах")
                 .expandVacanciesDropDownCategories("Тестировщик")
@@ -40,15 +39,34 @@ public class Tests extends TestBase {
     }
 
 
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("AT - Найти текст в секции описания вакансии")
     @Test
-    void test3() {
-
+    void findTextInVacancyDescriptionSection() {
+        siteObjects.openPage()
+            .putValueInSearchFieldAndSubmit(searchValueSberTech)
+//            .unsetCurrentCityFromFilter(currentCityRus)
+            .goToCompanyPageFromVacancyCard(searchValueSberTech)
+//            .expandVacanciesDropDownCategories("Вакансии в других регионах")
+            .expandVacanciesDropDownCategories("Тестировщик")
+            .clickOnTheVacancy("QA Automation Engineer")
+            .findTextInVacancyDescription("QA Engineer");
     }
 
 
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("AT - Проверить кнопку Госуслуги аккаунта на странице вакансии")
     @Test
-    void test4() {
-
+    void checkGosuslugiAccountButtonOnVacancyPage() {
+        siteObjects.openPage()
+                .putValueInSearchFieldAndSubmit(searchValueSberTech)
+//            .unsetCurrentCityFromFilter(currentCityRus)
+                .goToCompanyPageFromVacancyCard(searchValueSberTech)
+//            .expandVacanciesDropDownCategories("Вакансии в других регионах")
+                .expandVacanciesDropDownCategories("Тестировщик")
+                .clickOnTheVacancy("QA Automation Engineer")
+                .clickOnGosuslugiAccountButton()
+                .verifyPageUrl(gosuslugiUrl);
     }
 
 
