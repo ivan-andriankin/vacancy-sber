@@ -19,7 +19,7 @@ public class SiteObjects {
             vacancyTitle = $("[data-qa=vacancy-title]"),
             vacancyResponseLink = $("[data-qa=vacancy-response-link-top]"),
             gosuslugiAccountButton = $("a[data-qa=account-account-login-social-esia"),
-            vacancyDescription = $("div[.vacancy-description]"),
+            vacancyDescription = $("div[class=vacancy-description]"),
             buttonIWantToWorkHere = $("[data-qa=resumeservice-button__targetemployer]")
     ;
 
