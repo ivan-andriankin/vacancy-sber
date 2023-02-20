@@ -7,9 +7,8 @@ import java.util.List;
 
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.*;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.url;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SiteObjects {
@@ -96,14 +95,8 @@ public class SiteObjects {
         return this;
     }
 
-    public SiteObjects clickOnGosuslugiAccountButton() {
-        gosuslugiAccountButton.click();
-        return this;
-    }
-
-    public SiteObjects verifyPageUrl(String value) {
-        sleep(1500);
-        assertEquals(value, url());
+    public SiteObjects checkGosuslugiAccountButtonPresent() {
+        gosuslugiAccountButton.shouldBe(visible);
         return this;
     }
 

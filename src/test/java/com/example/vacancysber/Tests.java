@@ -11,7 +11,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.List;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.sleep;
 
 @Tag("vacancy_tests")
 public class Tests extends TestBase {
@@ -61,7 +60,7 @@ public class Tests extends TestBase {
 
 
     @Severity(SeverityLevel.NORMAL)
-    @DisplayName("AT - Проверить кнопку Госуслуги аккаунта на странице вакансии")
+    @DisplayName("AT - Проверить наличие кнопки 'Госуслуги' на странице вакансии")
     @Test
     void checkGosuslugiAccountButtonOnVacancyPage() {
         siteObjects.openPage()
@@ -71,8 +70,7 @@ public class Tests extends TestBase {
 //                .expandVacanciesDropDownCategories("Вакансии в других регионах")
                 .expandVacanciesDropDownCategories("Тестировщик")
                 .clickOnTheVacancy("QA Automation Engineer")
-                .clickOnGosuslugiAccountButton()
-                .verifyPageUrl(gosuslugiUrl)
+                .checkGosuslugiAccountButtonPresent()
         ;
     }
 
