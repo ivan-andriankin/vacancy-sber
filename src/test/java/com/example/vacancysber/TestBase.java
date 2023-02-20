@@ -21,7 +21,7 @@ public class TestBase {
 
     SiteObjects siteObjects = new SiteObjects();
 
-    static String currentCityRus = "Тольятти";
+    static String currentCityRus = "Москва";
     static String currentCityEng = "Tolyatti";
     static String searchValueSberTech = "SberTech";
     static String gosuslugiUrl = "https://esia.gosuslugi.ru/login/";

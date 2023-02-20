@@ -102,6 +102,7 @@ public class SiteObjects {
     }
 
     public SiteObjects verifyPageUrl(String value) {
+        sleep(1500);
         assertEquals(value, url());
         return this;
     }

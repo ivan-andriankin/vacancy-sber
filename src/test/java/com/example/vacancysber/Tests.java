@@ -33,7 +33,7 @@ public class Tests extends TestBase {
     void findVacancyInSberTech() {
         siteObjects.openPage()
                 .putValueInSearchFieldAndSubmit(searchValueSberTech)
-//                .unsetCurrentCityFromFilter(currentCityRus)
+                .unsetCurrentCityFromFilter(currentCityRus)
                 .goToCompanyPageFromVacancyCard(searchValueSberTech)
 //                .expandVacanciesDropDownCategories("Вакансии в других регионах")
                 .expandVacanciesDropDownCategories("Тестировщик")
