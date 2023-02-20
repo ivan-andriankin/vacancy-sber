@@ -1,6 +1,5 @@
 package com.example.vacancysber;
 
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 
@@ -8,6 +7,7 @@ import java.util.List;
 
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverRunner.url;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -16,19 +16,19 @@ public class SiteObjects {
 
     private SelenideElement
             searchInput = $("#a11y-search-input"),
-            vacancyTitle = $("[data-qa=vacancy-title]"),
-            vacancyResponseLink = $("[data-qa=vacancy-response-link-top]"),
+            vacancyTitle = $("div[class=vacancy-title]"),
+            vacancyResponseLink = $("a[data-qa=vacancy-response-link-top]"),
             gosuslugiAccountButton = $("a[data-qa=account-account-login-social-esia"),
             vacancyDescription = $("div[class=vacancy-description]"),
-            buttonIWantToWorkHere = $("[data-qa=resumeservice-button__targetemployer]")
+            buttonIWantToWorkHere = $("a[data-qa=resumeservice-button__targetemployer]")
     ;
 
     private ElementsCollection
             languageButton = $$(".lang--N5GSKUyI3fBf0bLLxFVh"),
             buttonsInTopMenu = $$(".supernova-navi-item.supernova-navi-item_lvl-1"),
-            locationForVacancy = $$("[data-qa=serp__novafilter-title]"),
+            locationForVacancy = $$("span[data-qa=serp__novafilter-title]"),
             allDivElements = $$("div"),
-            companyNameInVacancyCard = $$("[data-qa=vacancy-serp__vacancy-employer]"),
+            companyNameInVacancyCard = $$("a[data-qa=vacancy-serp__vacancy-employer]"),
             allButtonsForVacanciesInProfile = $$("button[data-qa=vacancies-in-prof-role-switch]"),
             particularVacancy = $$(".bloko-link"),
             enterTheSiteHeader = $$(".bloko-header-section-2")
