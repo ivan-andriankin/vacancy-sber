@@ -18,7 +18,7 @@ public class SiteObjects {
             searchInput = $("#a11y-search-input"),
             vacancyTitle = $("div[class=vacancy-title]"),
             vacancyResponseLink = $("a[data-qa=vacancy-response-link-top]"),
-            gosuslugiAccountButton = $("a[data-qa=account-account-login-social-esia"),
+            gosuslugiAccountButton = $("a[data-qa=account-login-social-esia"),
             vacancyDescription = $("div[class=vacancy-description]"),
             buttonIWantToWorkHere = $("a[data-qa=resumeservice-button__targetemployer]")
     ;
