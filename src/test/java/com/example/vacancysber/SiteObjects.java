@@ -19,7 +19,8 @@ public class SiteObjects {
             vacancyTitle = $("[data-qa=vacancy-title]"),
             vacancyResponseLink = $("[data-qa=vacancy-response-link-top]"),
             gosuslugiAccountButton = $("a[data-qa=account-account-login-social-esia"),
-            vacancyDescription = $("div[.vacancy-description]")
+            vacancyDescription = $("div[.vacancy-description]"),
+            buttonIWantToWorkHere = $("[data-qa=resumeservice-button__targetemployer]")
     ;
 
     private ElementsCollection
@@ -29,7 +30,8 @@ public class SiteObjects {
             allDivElements = $$("div"),
             companyNameInVacancyCard = $$("[data-qa=vacancy-serp__vacancy-employer]"),
             allButtonsForVacanciesInProfile = $$("button[data-qa=vacancies-in-prof-role-switch]"),
-            particularVacancy = $$(".bloko-link")
+            particularVacancy = $$(".bloko-link"),
+            enterTheSiteHeader = $$(".bloko-header-section-2")
     ;
 
 
@@ -104,5 +106,14 @@ public class SiteObjects {
         return this;
     }
 
+    public SiteObjects clickOnButtonIWantToWorkHere() {
+        buttonIWantToWorkHere.click();
+        return this;
+    }
+
+    public SiteObjects checkEnterTheSiteHeader() {
+        enterTheSiteHeader.first().shouldHave(text("Войдите на сайт"));
+        return this;
+    }
 
 }

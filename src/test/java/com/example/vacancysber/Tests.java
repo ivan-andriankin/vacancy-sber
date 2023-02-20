@@ -19,7 +19,8 @@ public class Tests extends TestBase {
     void checkSetOfButtonsInTopMenuInEnglishAndRussian(List<String> buttons) {
         siteObjects.openPage()
                 .changeLanguage()
-                .checkButtonsInTopMenu(buttons);
+                .checkButtonsInTopMenu(buttons)
+        ;
     }
 
 
@@ -35,7 +36,8 @@ public class Tests extends TestBase {
                 .expandVacanciesDropDownCategories("Тестировщик")
                 .clickOnTheVacancy("QA Automation Engineer")
                 .checkVacancyTitle("QA Automation Engineer")
-                .clickVacancyResponseButton();
+                .clickVacancyResponseButton()
+        ;
     }
 
 
@@ -50,7 +52,8 @@ public class Tests extends TestBase {
 //            .expandVacanciesDropDownCategories("Вакансии в других регионах")
             .expandVacanciesDropDownCategories("Тестировщик")
             .clickOnTheVacancy("QA Automation Engineer")
-            .findTextInVacancyDescription("QA Engineer");
+            .findTextInVacancyDescription("QA Engineer")
+        ;
     }
 
 
@@ -66,13 +69,22 @@ public class Tests extends TestBase {
                 .expandVacanciesDropDownCategories("Тестировщик")
                 .clickOnTheVacancy("QA Automation Engineer")
                 .clickOnGosuslugiAccountButton()
-                .verifyPageUrl(gosuslugiUrl);
+                .verifyPageUrl(gosuslugiUrl)
+        ;
     }
 
 
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("AT - Проверить кнопку 'Я хочу тут работать' в хедере")
     @Test
-    void test5() {
-
+    void checkButtonIWantToWorkHere() {
+        siteObjects.openPage()
+                .putValueInSearchFieldAndSubmit(searchValueSberTech)
+                .unsetCurrentCityFromFilter(currentCityRus)
+                .goToCompanyPageFromVacancyCard(searchValueSberTech)
+                .clickOnButtonIWantToWorkHere()
+                .checkEnterTheSiteHeader()
+        ;
     }
 
 }
