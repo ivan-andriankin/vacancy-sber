@@ -80,7 +80,7 @@ public class Tests extends TestBase {
     void checkButtonIWantToWorkHere() {
         siteObjects.openPage()
                 .putValueInSearchFieldAndSubmit(searchValueSberTech)
-                .unsetCurrentCityFromFilter(currentCityRus)
+//                .unsetCurrentCityFromFilter(currentCityRus)
                 .goToCompanyPageFromVacancyCard(searchValueSberTech)
                 .clickOnButtonIWantToWorkHere()
                 .checkEnterTheSiteHeader()
